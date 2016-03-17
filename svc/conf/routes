@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+# NOTE***** Static content should be listed at the end of the file******
+
+# ~~~~
+
+# DYNAMIC CONTENT
+
+
+#STATIC CONTENT
+
+# Home page
+GET         /                                   controllers.Assets.at(path="/public/webapp", file="index.html")
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /*file                              controllers.Assets.versioned(path="/public/webapp", file: Asset)
