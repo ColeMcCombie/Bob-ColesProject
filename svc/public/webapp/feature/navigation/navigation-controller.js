@@ -2,12 +2,12 @@
 
 (function () {
     angular.module("app")
-        .controller("homeController",
-        ["$state", "$log", HomeCtrl]);
+        .controller("navigationController",
+        ["$state", "$log", NavigationCtrl]);
 
     function HomeCtrl($state, $log) {
         var vm = this;
-        $log.debug("Instantiated homeController controller");
+        $log.debug("Instantiated navigationController controller");
 
         vm.isAtHomepage = function () {
             return $state.is("home.homepage");
