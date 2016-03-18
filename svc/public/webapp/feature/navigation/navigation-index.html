@@ -1,9 +1,20 @@
 <div class="navigation" data-ng-controller="navigationController as navigationCtrl">
-    <header>
-        <ul class="nav nav-tabs">
-            <li data-ng-class="{'active': navigationCtrl.isAtHomepage()}"><a data-ng-click="navigationCtrl.navigateToHomepage()">HomePage</a></li>
-            <li data-ng-class="{'active': navigationCtrl.isAtContact()}"><a data-ng-click="navigationCtrl.navigateToContact()">Contacts</a></li>
-        </ul>
-    </header>
-    <div class="content container-fluid" data-ui-view="home-content"></div>
+    <div id="menu" class="navbar navbar-default">
+        <div class="navbar-header">
+            <button class="btn btn-success navbar-toggle" 
+                           data-toggle="collapse"
+                           data-target=".navbar-collapse"><span class="glyphicon glyphicon-chevron-down"></span></button>
+            <div id="logo">
+                <a href='.'><h4>THIS IS THE NAV BAR</h4></a>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nab navbar-right">
+                <li class="nav"><a data-ng-click="navigationCtrl.navigateToHome()">Home</a></li>
+                <li class="nav"><a data-ng-click="navigationCtrl.navigateToContact()">Contacts</a></li>
+                <li class="nav"><a>Add New Contact</a></li>
+                <li class="nav"><a>Personalise</a></li>
+            </ul>
+        </div>
+    </div>
 </div>

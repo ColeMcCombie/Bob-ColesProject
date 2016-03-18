@@ -1,11 +1,12 @@
-"use strict"
+"use strict";
+
 (function () {
     angular.module("app")
     .controller("contactController",
-               ["$log", DashboardCtrl]);
+               ["$log", ContactCtrl]);
     
     function ContactCtrl ($log) {
         var vm = this;
         $log.debug("Instantiated contactController controller");
     }
-})
+});

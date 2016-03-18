@@ -5,24 +5,24 @@
         .controller("navigationController",
         ["$state", "$log", NavigationCtrl]);
 
-    function HomeCtrl($state, $log) {
+    function NavigationCtrl($state, $log) {
         var vm = this;
         $log.debug("Instantiated navigationController controller");
 
-        vm.isAtHomepage = function () {
-            return $state.is("home.homepage");
+        vm.isAtHome = function () {
+            return $state.is("navigation.home");
         };
         
         vm.isAtContact = function () {
-            return $state.is("home.contact");
+            return $state.is("navigation.contact");
         };
         
-        vm.navigateToHomepage = function () {
-            $state.go("home.homepage");
+        vm.navigateToHome = function () {
+            $state.go("navigation.home");
         };
         
         vm.navigateToContact = function () {
-            $state.go("home.contact");
+            $state.go("navigation.contact");
         };
     }
 }());
