@@ -4,13 +4,13 @@
 
     angular.module('app').config(function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise("homepage");
+        $urlRouterProvider.otherwise("login");
 
-        $stateProvider.state("homepage", {
-            url: "/homepage",
+        $stateProvider.state("login", {
+            url: "/login",
             views: {
                 "content": {
-                    templateUrl: "feature/home/home-index.html"
+                    templateUrl: "feature/login/login-index.html"
                 }
             }
         })
@@ -23,20 +23,27 @@
 (function () {
 
     angular.module('app').config(function ($stateProvider) {
-        $stateProvider.state("home", {
+        $stateProvider.state("navigation", {
             abstract: true,
             views: {
                 "content": {
-                    templateUrl: "feature/home/home-index.html"
+                    templateUrl: "feature/navigation/navigation-index.html"
                 }
             }
-        }).state("home.contact", {
+        }).state("navigation.home", {
+                        url: "/home",
+                        views: {
+                            "home-content": {
+                                templateUrl: "feature/home/home-index.html"
+                            }
+                        }
+        }).state("navigation.contact", {
                         url: "/contact",
                         views: {
                             "home-content": {
                                 templateUrl: "feature/contact/contact-index.html"
                             }
                         }
-                    })
-                });
+                })   
+        });
 }());
