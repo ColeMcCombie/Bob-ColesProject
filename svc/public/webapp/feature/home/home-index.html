@@ -1,9 +1,0 @@
-<div class="home" data-ng-controller="homeController as homeCtrl">
-    <header>
-        <ul class="nav nav-tabs">
-            <li data-ng-class="{'active': homeCtrl.isAtHomepage()}"><a data-ng-click="homeCtrl.navigateToHomepage()">HomePage</a></li>
-            <li data-ng-class="{'active': homeCtrl.isAtContact()}"><a data-ng-click="homeCtrl.navigateToContact()">Contacts</a></li>
-        </ul>
-    </header>
-    <div class="content container-fluid" data-ui-view="home-content"></div>
-</div>
