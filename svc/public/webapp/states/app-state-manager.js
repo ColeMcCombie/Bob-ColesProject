@@ -23,13 +23,20 @@
 (function () {
 
     angular.module('app').config(function ($stateProvider) {
-        $stateProvider.state("contact", {
-                    abstract: true,
-                    views: {
-                        "content": {
-                            templateUrl: "feature/contact/contact-index.html"
+        $stateProvider.state("home", {
+            abstract: true,
+            views: {
+                "content": {
+                    templateUrl: "feature/home/home-index.html"
+                }
+            }
+        }).state("home.contact", {
+                        url: "/contact",
+                        views: {
+                            "home-content": {
+                                templateUrl: "feature/contact/contact-index.html"
+                            }
                         }
-                    }
-                })
-     });
+                    })
+                });
 }());

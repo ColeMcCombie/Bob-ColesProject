@@ -13,15 +13,15 @@
             return $state.is("home.homepage");
         };
         
-        vm.isAtContacts = function () {
-            return $state.is("home.contacts");
+        vm.isAtContact = function () {
+            return $state.is("home.contact");
         };
         
         vm.navigateToHomepage = function () {
             $state.go("home.homepage");
         };
         
-        vm.navigateToContacts = function () {
+        vm.navigateToContact = function () {
             $state.go("home.contact");
         };
     }
