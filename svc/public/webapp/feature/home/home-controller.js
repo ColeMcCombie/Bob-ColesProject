@@ -12,9 +12,17 @@
         vm.isAtHomepage = function () {
             return $state.is("home.homepage");
         };
-
+        
+        vm.isAtContacts = function () {
+            return $state.is("home.contacts");
+        };
+        
         vm.navigateToHomepage = function () {
             $state.go("home.homepage");
+        };
+        
+        vm.navigateToContacts = function () {
+            $state.go("home.contact");
         };
     }
 }());

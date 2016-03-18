@@ -18,20 +18,18 @@
 }());
 
 
-/*
+
 
 (function () {
 
     angular.module('app').config(function ($stateProvider) {
-        $stateProvider.state("home", {
+        $stateProvider.state("contact", {
                     abstract: true,
                     views: {
                         "content": {
-                            templateUrl: "feature/home/home-index.html"
+                            templateUrl: "feature/contact/contact-index.html"
                         }
                     }
                 })
      });
 }());
-*/
-
